@@ -257,8 +257,6 @@ int main() {
     int n;
     cin >> n;
     srand(time(0));
-
-    cout << "Matrix " << n << "-by-" << n << ":" << endl;
     printMatrix(n);
     cout << "PROBLEM 17\n";
     displayEvenPalindromes(50);
