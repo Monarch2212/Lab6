@@ -179,7 +179,10 @@ string convertMillis(long millis) {
     
     return timeFormatted;
 }
-
+double area(int n, double side) {
+    double pi = 3.14159;
+    return (n * side * side) / (4 * tan(pi / n));
+}
 int main() {
     cout << "PROBLEM 1\n";
     int result = multiplyNumbers();
@@ -267,5 +270,13 @@ int main() {
     cin >> millis; 
     string time = convertMillis(millis);
     cout << time << endl;
+    cout << "PROBLEM 22\n";
+    int m;
+    double side;
+    cin >> m;
+    cin >> side;
+
+    double polygonArea = area(m, side);
+    cout << "The area of the polygon is " << polygonArea << endl;
     return 0;
 }
