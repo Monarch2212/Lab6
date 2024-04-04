@@ -219,7 +219,7 @@ int main() {
     int sum = cubeOfDigits(number);
     isArmstrong(sum, number);
     cout << "PROBLEM 13\n";
-    for (int year = 1985; year >= 1983; year--) {
+    for (int year = 1985; year <= 2023; year++) {
         cout << year << "\t" << numberOfDaysInFebruary(year) << endl;
     }
     cout << "PROBLEM 14\n";
