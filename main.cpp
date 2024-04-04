@@ -165,7 +165,18 @@ void displaySortedNumber(double a, double b, double c) {
     if (b > c)
         swap(b, c); 
     
-    cout << a << " < " << b << " < " << c << endl;
+    cout << a << "," << b << "," << c << endl;
+}
+string convertMillis(long millis) {
+    auto totalSeconds = millis / 1000; 
+    auto seconds = totalSeconds % 60; 
+    auto totalMinutes = totalSeconds / 60; 
+    auto minutes = totalMinutes % 60; 
+    auto hours = totalMinutes / 60;
+
+    string timeFormatted = to_string(hours) + ":" + to_string(minutes) + ":" + to_string(seconds);
+    
+    return timeFormatted;
 }
 
 int main() {
@@ -255,6 +266,9 @@ int main() {
     cin >> x1 >> y1 >> z1;
     displaySortedNumber(x1, y1, z1);
     cout << "PROBLEM 20\n";
-    
+    long millis;
+    cin >> millis; 
+    string time = convertMillis(millis);
+    cout << time << endl;
     return 0;
 }
