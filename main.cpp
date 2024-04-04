@@ -251,9 +251,9 @@ int main() {
     cout << "PROBLEM 17\n";
     displayEvenPalindromes(50);
     cout << "PROBLEM 19\n";
-    double x, y, z;
-    cin >> x >> y >> z;
-    displaySortedNumber(x, y, z);
+    double x1, y1, z1;
+    cin >> x1 >> y1 >> z1;
+    displaySortedNumber(x1, y1, z1);
     cout << "PROBLEM 20\n";
     
     return 0;
