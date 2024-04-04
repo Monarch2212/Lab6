@@ -250,8 +250,6 @@ int main() {
     char startChar = 'a';
     char endChar = 'm';
     int numberPerLine = 6;
-
-    cout << "ASCII values between '" << startChar << "' and '" << endChar << "':" << endl;
     printASCII(startChar, endChar, numberPerLine);
     cout << "PROBLEM 16\n";
     int n;
