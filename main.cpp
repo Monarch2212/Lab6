@@ -273,7 +273,9 @@ int main() {
     cout << "PROBLEM 22\n";
     int m;
     double side;
+    cout << "Enter the number of sides: ";
     cin >> m;
+    cout << "Enter the side: ";
     cin >> side;
 
     double polygonArea = area(m, side);
