@@ -284,33 +284,33 @@ int main() {
     double polygonArea = area(m, side);
     cout << "The area of the polygon is " << polygonArea << endl;
     cout << "PROBLEM 23\n";
-    srand(time(0));
+    srand(0);
 
     int point = 0;
-    int sum = 0;
+    int sum1 = 0;
 
     while (true) {
         int dice1 = rollDice();
         int dice2 = rollDice();
-        sum = dice1 + dice2;
+        sum1 = dice1 + dice2;
 
-        cout << "You rolled " << dice1 << " + " << dice2 << " = " << sum;
+        cout << "You rolled " << dice1 << " + " << dice2 << " = " << sum1;
 
-        if (sum == 7 || sum == 11) {
+        if (sum1 == 7 || sum1 == 11) {
             cout << ". You win" << endl;
             break;
-        } else if (sum == 2 || sum == 3 || sum == 12) {
+        } else if (sum1 == 2 || sum1 == 3 || sum1 == 12) {
             cout << ". You lose" << endl;
             break;
         } else {
             if (point == 0) {
-                point = sum;
+                point = sum1;
                 cout << ". Point is " << point << endl;
             } else {
-                if (sum == point) {
+                if (sum1 == point) {
                     cout << ". You win" << endl;
                     break;
-                } else if (sum == 7) {
+                } else if (sum1 == 7) {
                     cout << ". You lose" << endl;
                     break;
                 }
