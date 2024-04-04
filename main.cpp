@@ -183,6 +183,9 @@ double area(int n, double side) {
     double pi = 3.14159;
     return (n * side * side) / (4 * tan(pi / n));
 }
+int rollDice() {
+    return rand() % 6 + 1;
+}
 int main() {
     cout << "PROBLEM 1\n";
     int result = multiplyNumbers();
@@ -280,5 +283,39 @@ int main() {
 
     double polygonArea = area(m, side);
     cout << "The area of the polygon is " << polygonArea << endl;
+    cout << "PROBLEM 23\n";
+    srand(time(0));
+
+    int point = 0;
+    int sum = 0;
+
+    while (true) {
+        int dice1 = rollDice();
+        int dice2 = rollDice();
+        sum = dice1 + dice2;
+
+        cout << "You rolled " << dice1 << " + " << dice2 << " = " << sum;
+
+        if (sum == 7 || sum == 11) {
+            cout << ". You win" << endl;
+            break;
+        } else if (sum == 2 || sum == 3 || sum == 12) {
+            cout << ". You lose" << endl;
+            break;
+        } else {
+            if (point == 0) {
+                point = sum;
+                cout << ". Point is " << point << endl;
+            } else {
+                if (sum == point) {
+                    cout << ". You win" << endl;
+                    break;
+                } else if (sum == 7) {
+                    cout << ". You lose" << endl;
+                    break;
+                }
+            }
+        }
+    }
     return 0;
 }
